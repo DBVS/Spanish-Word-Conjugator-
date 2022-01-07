@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Mr. Fernandez's Word Conjugator</title>
+        <script type="text/javascript">
+        function fn1()  
+        {
+            var str = document.getElementById("text1").value;
+            var last2 = str.slice(-2);
+
+            if(last2 === "ar") 
+            {
+                var strAr = str;
+                choppedAr = strAr.slice(0, -2);
+                let yoAr = choppedAr.concat("o");
+                let tuAr = choppedAr.concat("as");
+                let elAr = choppedAr.concat("a");
+                let nosoAr = choppedAr.concat("amos");
+                let ellosAr = choppedAr.concat("an");
+                document.getElementById("yo").innerHTML = yoAr;
+                document.getElementById("tu").innerHTML = tuAr;
+                document.getElementById("el").innerHTML = elAr;
+                document.getElementById("noso").innerHTML = nosoAr;
+                document.getElementById("ellos").innerHTML = ellosAr;
+                
+            }
+            else if(last2 === "er") 
+            {
+                var strEr = str;
+                var choppedEr = strEr.slice(0, -2);
+                let yoEr = choppedEr.concat("o");
+                let tuEr = choppedEr.concat("es");
+                let elEr = choppedEr.concat("e");
+                let nosoEr = choppedEr.concat("emos");
+                let ellosEr = choppedEr.concat("en");
+                document.getElementById("yo").innerHTML = yoEr;
+                document.getElementById("tu").innerHTML = tuEr;
+                document.getElementById("el").innerHTML = elEr;
+                document.getElementById("noso").innerHTML = nosoEr;
+                document.getElementById("ellos").innerHTML = ellosEr;
+
+            }
+            else if(last2 === "ir") 
+            {
+                var strIr = str;
+                var choppedIr = strIr.slice(0, -2);
+                let yoIr = choppedIr.concat("o");
+                let tuIr = choppedIr.concat("es");
+                let elIr = choppedIr.concat("e");
+                let nosoIr = choppedIr.concat("imos");
+                let ellosIr = choppedIr.concat("en");
+                document.getElementById("yo").innerHTML = yoIr;
+                document.getElementById("tu").innerHTML = tuIr;
+                document.getElementById("el").innerHTML = elIr;
+                document.getElementById("noso").innerHTML = nosoIr;
+                document.getElementById("ellos").innerHTML = ellosIr;
+
+            }
+            else 
+            {
+                alert("Not possible (yet)");
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <form id="form" onsubmit="return false">
+        <input id="text1" placeholder="Unconjugated Word">
+        <br>
+        <button onclick="fn1()" id = "btn1">Conjugate</button>
+        <input type="reset" value="Reset">
+
+        <br>
+        <br>
+        <br>
+        <table>
+            <tr>
+              <th>Conjugation</th>
+              <th>Output</th>
+            </tr>
+            <tr>
+              <td>Yo: </td>
+              <td id="yo">nothing</td>
+            </tr>
+            <tr>
+              <td>Tu: </td>
+              <td id="tu">nothing</td>
+            </tr>
+            <tr>
+              <td>El/Ella/Ud: </td>
+              <td id="el">nothing</td>
+            </tr>
+            <tr>
+              <td>Nosotros/as: </td>
+              <td id="noso">nothing</td>
+            </tr>
+            <tr>
+              <td>Ellos/Ellas/Uds: </td>
+              <td id="ellos">nothing</td>
+            </tr>
+          </table>
+        </form>
+        <br>
+        <p style="text-align: left;">This code for conjugating words in spanish is still WIP.</p>
+        <br> 
+        <p style="text-align: left;">For P1 Spanish</p>
+
+    </body>
+</html>
